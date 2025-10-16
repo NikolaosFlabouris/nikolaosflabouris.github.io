@@ -1,0 +1,300 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Contact - Nikolaos Flabouris"
+  description="Get in touch with Nikolaos Flabouris for software engineering consulting services."
+>
+  <Navigation />
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Get In Touch</h1>
+          <p>Let's discuss how I can help with your project</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="info-card card">
+              <div class="info-icon">📧</div>
+              <h3>Email</h3>
+              <a href="mailto:test@example.com">test@example.com</a>
+            </div>
+
+            <div class="info-card card">
+              <div class="info-icon">📍</div>
+              <h3>Location</h3>
+              <p>San Francisco, CA</p>
+              <p class="text-muted">Available for remote work worldwide</p>
+            </div>
+
+            <div class="info-card card">
+              <div class="info-icon">💼</div>
+              <h3>Availability</h3>
+              <p>Open for consulting</p>
+              <p class="text-muted">Typically responds within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="social-section card">
+            <h2>Connect With Me</h2>
+            <p>Follow my work and connect on social media</p>
+            <div class="social-links-large">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  ></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="mailto:test@example.com" class="social-link">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="message-card card">
+            <h2>Why Work With Me?</h2>
+            <ul class="benefits-list">
+              <li>
+                <strong>Proven Expertise:</strong> Over a decade of experience in
+                software engineering and consulting.
+              </li>
+              <li>
+                <strong>Quality Focus:</strong> Committed to delivering clean, maintainable,
+                and scalable solutions.
+              </li>
+              <li>
+                <strong>Clear Communication:</strong> Regular updates and transparent
+                collaboration throughout the project.
+              </li>
+              <li>
+                <strong>Flexible Engagement:</strong> Available for short-term projects
+                or long-term partnerships.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    flex: 1;
+  }
+
+  .contact-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .info-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .info-card p {
+    margin: 0.25rem 0;
+  }
+
+  .info-card a {
+    color: var(--accent-blue);
+    word-break: break-word;
+  }
+
+  .social-section {
+    text-align: center;
+    padding: 2.5rem;
+  }
+
+  .social-section h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .social-section > p {
+    margin-bottom: 2rem;
+  }
+
+  .social-links-large {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 140px;
+  }
+
+  .social-link:hover {
+    background: linear-gradient(
+      135deg,
+      var(--accent-blue),
+      var(--accent-purple)
+    );
+    border-color: transparent;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--shadow-lg);
+  }
+
+  .social-link svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-link span {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .message-card {
+    padding: 2.5rem;
+  }
+
+  .message-card h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .benefits-list li {
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  .benefits-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .benefits-list strong {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .contact-info {
+      grid-template-columns: 1fr;
+    }
+
+    .social-links-large {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .social-link {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+</style>

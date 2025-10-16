@@ -1,0 +1,105 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	type: string;
+	url: string;
+	tags: string[];
+}
+
+const { title, description, type, url, tags } = Astro.props;
+---
+
+<div class="resource-card card" data-type={type} data-tags={tags.join(',')}>
+	<div class="resource-header">
+		<span class="tag resource-type">{type}</span>
+	</div>
+	<h3 class="resource-title">{title}</h3>
+	<p class="resource-description">{description}</p>
+	<div class="resource-tags">
+		{tags.map((tag) => <span class="tag">{tag}</span>)}
+	</div>
+	<a href={url} target="_blank" rel="noopener noreferrer" class="resource-link">
+		View Resource
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="16"
+			height="16"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
+			<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+			<polyline points="15 3 21 3 21 9"></polyline>
+			<line x1="10" y1="14" x2="21" y2="3"></line>
+		</svg>
+	</a>
+</div>
+
+<style>
+	.resource-card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 1.5rem;
+	}
+
+	.resource-header {
+		margin-bottom: 1rem;
+	}
+
+	.resource-type {
+		background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+		color: white;
+		border: none;
+		font-weight: 600;
+	}
+
+	.resource-title {
+		font-size: 1.25rem;
+		margin-bottom: 0.75rem;
+		color: var(--text-primary);
+	}
+
+	.resource-description {
+		flex: 1;
+		margin-bottom: 1rem;
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: var(--text-secondary);
+	}
+
+	.resource-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.resource-tags .tag {
+		font-size: 0.8rem;
+	}
+
+	.resource-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--accent-blue);
+		font-weight: 600;
+		text-decoration: none;
+		transition: gap 0.3s ease;
+	}
+
+	.resource-link:hover {
+		gap: 0.75rem;
+		color: var(--accent-purple);
+	}
+
+	.resource-link svg {
+		width: 16px;
+		height: 16px;
+	}
+</style>

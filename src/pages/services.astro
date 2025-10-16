@@ -1,0 +1,118 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+
+const services = [
+  {
+    title: "Custom Web Development",
+    description:
+      "Full-stack application development using modern frameworks and best practices. From concept to deployment, I build scalable, performant web applications tailored to your needs.",
+    icon: "💻",
+  },
+  {
+    title: "Architecture & Design",
+    description:
+      "Strategic system design and technical planning to ensure your application scales efficiently. Expert guidance on technology selection, database design, and infrastructure architecture.",
+    icon: "🏗️",
+  },
+  {
+    title: "Code Review & Audit",
+    description:
+      "Comprehensive code quality assessment with actionable recommendations. Identify technical debt, security vulnerabilities, and performance bottlenecks before they become problems.",
+    icon: "🔍",
+  },
+  {
+    title: "Technical Consulting",
+    description:
+      "Strategic technology guidance for your business needs. From evaluating new technologies to planning migrations, get expert advice to make informed technical decisions.",
+    icon: "💡",
+  },
+  {
+    title: "Team Mentorship",
+    description:
+      "Training and knowledge transfer to level up your engineering team. Code reviews, pair programming sessions, and best practices workshops to foster growth and excellence.",
+    icon: "👥",
+  },
+  {
+    title: "Performance Optimization",
+    description:
+      "Speed and efficiency improvements for existing applications. Identify bottlenecks, optimize database queries, and implement caching strategies to enhance user experience.",
+    icon: "⚡",
+  },
+];
+---
+
+<Layout
+  title="Services - Nikolaos Flabouris"
+  description="Professional software engineering consulting services including web development, architecture design, code reviews, and team mentorship."
+>
+  <Navigation />
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h1>Services</h1>
+          <p>Expert software engineering consulting tailored to your needs</p>
+        </div>
+
+        <div class="services-grid grid grid-3">
+          {services.map((service) => <ServiceCard {...service} />)}
+        </div>
+
+        <div class="cta-section">
+          <h2>Ready to get started?</h2>
+          <p>Let's discuss how I can help you achieve your technical goals.</p>
+          <a href="/contact" class="btn btn-primary">Contact Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    flex: 1;
+  }
+
+  .services-grid {
+    margin-bottom: 4rem;
+  }
+
+  .cta-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(
+      135deg,
+      rgba(59, 130, 246, 0.1),
+      rgba(139, 92, 246, 0.1)
+    );
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .cta-section h2 {
+      font-size: 1.5rem;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
