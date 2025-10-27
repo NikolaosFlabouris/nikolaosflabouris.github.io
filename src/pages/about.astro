@@ -5,24 +5,32 @@ import Footer from "../components/Footer.astro";
 
 const skills = [
   {
+    category: "Technologies",
+    items: ["Desktop & Cloud Software", "AI & ML", "IoT"],
+  },
+  {
     category: "Languages",
-    items: ["JavaScript", "TypeScript", "Python", "Go", "Java", "SQL"],
+    items: ["JavaScript & TypeScript", "Python", "C#"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Vue", "Astro", "Next.js", "Svelte", "HTML/CSS"],
+    category: "DevSecOps",
+    items: ["Containerisation", "CI/CD", "Testing"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "FastAPI", "Django", "PostgreSQL", "MongoDB"],
+    category: "Databases",
+    items: ["PostgreSQL", "MongoDB", "InfluxDB"],
   },
   {
-    category: "DevOps & Cloud",
-    items: ["Docker", "Kubernetes", "AWS", "Azure", "CI/CD", "Terraform"],
+    category: "Tooling",
+    items: ["Version Control", "Development Environments", "Agentic AI"],
   },
   {
-    category: "Tools & Methods",
-    items: ["Git", "VS Code", "Agile", "TDD", "REST APIs", "GraphQL"],
+    category: "Design & Governance",
+    items: [
+      "Software Development Plan",
+      "System Architecture",
+      "Technology Roadmap",
+    ],
   },
 ];
 ---
@@ -38,32 +46,26 @@ const skills = [
       <div class="container">
         <div class="section-title">
           <h1>About Me</h1>
-          <p>Software Engineer, Problem Solver, Tech Enthusiast</p>
+          <p>Engineering software solutions & developing people</p>
         </div>
 
         <div class="about-content">
           <div class="bio-card card">
             <h2>Professional Background</h2>
             <p>
-              With over a decade of experience in software engineering, I
-              specialize in building scalable, maintainable applications and
-              guiding teams through complex technical challenges. My passion
-              lies in creating elegant solutions to difficult problems and
-              mentoring developers to reach their full potential.
+              Through my past decade of experience as a software engineer I have
+              enabled teams to develop and deploy scalable and maintainable
+              solutions for a variety of problems. I am passionate about
+              fostering growth and enhancing the technical skills within
+              individuals and teams to reach their full potential.
             </p>
             <p>
-              Throughout my career, I've worked with startups and Fortune 500
-              companies, leading architectural decisions, conducting code
+              My contributions to successful software products include code
+              construction, leading architectural decisions, conducting code
               reviews, and implementing best practices that drive engineering
-              excellence. I believe in writing clean, testable code and
-              fostering a culture of continuous improvement.
-            </p>
-            <p>
-              When I'm not coding or consulting, you'll find me contributing to
-              open-source projects, writing technical articles, or exploring the
-              latest trends in software development. I'm committed to staying at
-              the forefront of technology and sharing knowledge with the
-              developer community.
+              excellence. I seek out and knowledge of current and emerging
+              tools, technologies, and trends. This enables me to distill
+              complex technical concepts into clear, actionable strategies.
             </p>
           </div>
 
